@@ -1,0 +1,299 @@
+html {
+    height: 100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	height: 100%;
+	width: 100%;
+}
+
+/************************************* HEADER ************************************/
+header {
+	height: 100px;
+	background-color: #21436c;
+	position: fixed;
+	width: 100%;
+	top:0;
+	left:0;
+}
+
+header .image {
+	height: 100%;
+	margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    display: block;
+}
+
+/********************************* ASSIGNMENT FORM ********************************/
+#selectAssignment_frmAssignment {
+	margin-left: auto;
+  	margin-right: auto;
+  	width: 560px;
+  	text-align: center;
+}
+
+#selectAssignment_assignmentsName {
+	width: 200px !important;
+    height: 20px;
+}
+
+#selectAssignment_searchAssignment {
+	width: 100px;
+}
+
+#selectAssignment_container {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#selectAssignment_cell {
+    height: 100%;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#selectAssignment_part {
+    width: 560px;
+    margin: 20px auto 20px auto;
+    text-align: left;
+}
+
+#selectAssignment_createAssignment {
+	width: 200px;
+}
+
+/******************************* POP UPs ASSIGNMENT ******************************/
+.afterCreateAssignment {
+    opacity: 0.3;
+}
+
+#createAssignment_errAssignment {
+    color: red;
+}
+
+#createAssignment_overlay {
+    display: none;
+    opacity: 0.5;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}
+
+#createAssignment_container {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    display: none;  
+    position: absolute;
+    z-index: 1000;
+}
+
+#createAssignment_cell {
+    height: 100%;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#createAssignment_part {
+    width: 666px;
+    height: 210px;
+    margin: 20px auto 20px auto;
+    text-align: left;
+}
+
+#createAssignment_popupBox {
+    display: none;  
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 666px;
+    height: 210px;
+    color: #000000;
+    border: 5px solid #dcdcdc;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background-color: #FFFFFF;
+    z-index: 1000;
+
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+}
+
+#createAssignment_popupContent {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    height: 90px;
+}
+
+#createAssignment_popupBox fieldset {
+    height: 93%;
+    border: 1px solid #dcdcdc;
+}
+
+#createAssignment_popupContent form {
+    margin-top : 20px;
+}
+
+#createAssignment_popupContent label {
+  display: block;
+  float: left;
+  width: 110px;
+  margin-right: 10px;
+  margin-top: -5px;
+  text-align: right;
+}
+
+#createAssignment_popupContent input {
+    float: right;
+    width: 200px;
+}
+
+#selectAssignment_createAssignment {
+    clear: both;
+    cursor: pointer;
+}
+
+#selectAssignment_createAssignment, #createAssignment_cancelValidation {
+    margin-top: 20px;
+}
+
+#createAssignment_cancelValidation{
+    cursor: pointer;
+}
+
+#createAssignment_confValidation {
+    display: none;
+}
+
+
+/********************************* SUBMISSION FORM ********************************/
+#selectSubmission_frmSubmitFile {
+	margin-left: auto;
+  	margin-right: auto;
+  	width: 500px;
+  	text-align: center;
+}
+
+#selectSubmission_frmSubmitFile {
+	min-width: 550px !important;
+}
+
+.selectSubmission_student {
+    margin-bottom: 20px;
+}
+
+.selectSubmission_idStudent {
+    width: 60px !important;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+#selectSubmission_container {
+    height: 200px;
+    margin-top: 80px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#selectSubmission_cell {
+    height: 60%;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#selectSubmission_part {
+    width: 550px;
+    margin: 20px auto 20px auto;
+    text-align: left;
+}
+
+#selectSubmission_container input[type="file"] {
+    display: none;
+}
+
+.uploadFile {
+	border: 2px solid #AAA;
+    border-radius: 4px;
+    margin: 2px;
+    background: ButtonFace;
+    display: inline-block;
+    padding: 2px 6px 3px;
+    border: 2px outset buttonface;
+
+    padding: 8px 0;
+    text-align: center;
+    display: inline-block;
+    margin: 0 8px 0 0;
+    border-radius: 7px;
+    font-size: 0.85em;
+    width: 120px;
+    color: #000;
+    font-family: Arial,sans-serif;
+    cursor: pointer;
+}
+
+/********************************* SIMILARITY PART ********************************/
+.displaySimiliarity_submissionsTable {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 600px;
+}
+
+#displaySimiliarity_frmSubmissions table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#displaySimiliarity_frmSubmissions td, #displaySimiliarity_frmSubmissions th, .selectSubmission_nameStudent {
+	width: 270px;
+    border: 1px solid black;
+}
+
+
+#displaySimiliarity_frmSubmissions table td, #displaySimiliarity_frmSubmissions table th {
+	border: 2px solid black;
+}
+
+#displaySimiliarity_frmSubmissions table thead th {
+	font-family: sans-serif;
+	color: black;
+	cursor: pointer;
+}
+
+.button {
+    width: auto;
+    padding: 8px 0;
+    text-align: center;
+    display: inline-block;
+    margin: 0 8px 0 0;
+    border-radius: 7px;
+    font-size: 0.85em;
+    width: 120px;
+    color: #000;
+    font-family: Arial,sans-serif;
+}
+
+.button:hover {
+	cursor: pointer;
+}

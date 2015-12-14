@@ -1,0 +1,72 @@
+{% load staticfiles %}
+
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'jplag/css/style.css' %}" />
+<script src="{% static  'jplag/javascript/jquery-1.10.2.js' %}"></script>
+<script type="text/javascript" src="{% static 'jplag/javascript/assignment.js' %}"></script>
+</head>
+
+<body>
+
+	<header>
+		<img src="./../../../static/jplag/images/EPFL-Logo.jpg" class = "image">
+	</header>
+
+	<table id="selectSubmission_container">
+		<tr>
+			<td id="selectSubmission_cell">
+		    	<div id="selectSubmission_part">
+					<form id = "selectSubmission_frmSubmitFile" enctype="multipart/form-data" action = "jplag" method = "post" >
+						{% csrf_token %}
+						<fieldset>
+					 	<legend> Submit file </legend>
+					 		<fieldset class="selectSubmission_student">
+					 		<legend> Student </legend>
+					 			<text type="text">Id :</text>
+					 			<input id = "id_student" class = "selectSubmission_idStudent" type="number" required = "required" name = "id_student">
+					 			<text type="text">Nom :</text>
+								<input id = "selectSubmission_student" class = "selectSubmission_nameStudent" type="input" required = "required" name = "student">
+					 		</fieldset>
+					 		<label for="selectSubmission_the-file-input" class="uploadFile">
+    							Choose file
+							</label>
+							<input id = "selectSubmission_the-file-input" type="file" required = "required" name = "uploadFromPC" multiple>
+						    <input id = "selectSubmission_submitFile" class = "button" type = "submit" value = "Submit !" name = "submitF" >
+						</fieldset>
+					</form>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+{% if submissions_list %}
+	<form id = "displaySimiliarity_frmSubmissions" action = "#">
+		<fieldset>
+	 	<legend> Submissions of {{ submissions_list.0.assignment }} </legend>
+			<table class="displaySimiliarity_submissionsTable">
+				<thead>
+					<tr>
+				       <th>Student 1</th>
+				       <th>Student 2</th>
+				       <th>Similarity (%)</th>
+				   </tr>
+			   </thead>
+
+			   <tbody>
+				{% for submission in submissions_list %}
+			   <tr>
+			       <td>{{ submission.sub1 }}</td>
+			       <td>{{ submission.sub2 }}</td>
+			       <td>{{ submission.similarity }}</td>
+			   </tr>
+			   {% endfor %}
+			   </tbody>
+			</table>
+    	</fieldset> 
+    </form>
+{% else %}
+    <p>No similarity are available.</p>
+{% endif %}
+
+<input id = "similarity_returnIndex" type="submit" value="Return!" class = "button"/> 
+</body>

@@ -1,0 +1,67 @@
+{% load staticfiles %}
+
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'jplag/css/style.css' %}" />
+<script src="{% static  'jplag/javascript/jquery-1.10.2.js' %}"></script>
+<script type="text/javascript" src="{% static 'jplag/javascript/index.js' %}"></script>	
+</head>
+
+<body>
+	<table id="createAssignment_container">
+		<tr>	
+			<td id="createAssignment_cell">
+			    <div id="createAssignment_part">
+					<div id="createAssignment_overlay"></div>
+					<div id="createAssignment_popupBox"> 
+						<fieldset>
+						<legend> Create an assignment </legend>
+							<div id="createAssignment_popupContent">
+								<form id = "createAssignment_frmCreateAssignment" method = "post">
+									{% csrf_token %}
+									 <label> Name : </label>
+									 <input id = "createAssignment_nameAssignment" name = "nameAssignment" type = "text" maxlength="255"><br>
+								</form>
+							</div>
+							<div id = "createAssignment_errCreateAssignment">
+								<label id = "createAssignment_errAssignment"></label><br>
+							</div>
+						    <div id="createAssignment_confValidation">Assignment added.</div>
+						    </fieldset>
+					    <input id = "createAssignment_validate" class = "button" type = "button" value = "Submit!">
+						<input id = "createAssignment_cancelValidation" class = "button" type = "button" value = "Cancel">
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<header>
+		<img src="./../../static/jplag/images/EPFL-Logo.jpg" class = "image">
+	</header>
+
+{% if hasAssignment %}
+	<table id="selectAssignment_container">
+		<tr>
+			<td id="selectAssignment_cell">
+		    	<div id="selectAssignment_part">
+					<form id = "selectAssignment_frmAssignment" action = "#" type = "post">
+						<fieldset>
+					 	<legend> Choose one assignment </legend>
+							<select id = "selectAssignment_assignmentsName" name="assignment" size="1">
+						    {% for assignment in hasAssignment %}
+							<option value = {{ assignment.id }}>{{ assignment.name_assignment }}
+						        <!--<li><a href="{% url 'jplag_app:assignment' assignment.id %}">{{ assignment.name_assignment }}</a></li>-->
+						    {% endfor %}
+						    </select>
+						    <input id = "selectAssignment_searchAssignment" class = "button" type = "submit" value = "Submit !" >
+						    <input id = "selectAssignment_createAssignment" class = "button" type = "submit" value = "Create a new assignment!" >
+				    	</fieldset> 
+				    </form>
+			    </div>
+			</td>
+		</tr>
+	</table>
+{% else %}
+    <p>No assignments are available.</p>
+{% endif %}
+</body>

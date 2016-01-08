@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Problem}{}% 2
+\BOOKMARK [1][-]{section.3}{Methods}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Performance analysis}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Preliminary approach to improvement}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{JPlag problem's}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{One solution : serialization}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{One more problem : deleting submissions}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Another JPlag platform : the administration part}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Results}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Pre Analysis}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{After serialization}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Discussion}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Number of submissions}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Number of files}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{Tokenize part : Length of files}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.4}{Tokenize part : I/O operations}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.5}{Multi-threading}{section.5}% 18
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 19
